@@ -30,14 +30,13 @@ export const routes: Routes = [
             { path: 'addCourse', component: AddTeacherComponent, canActivate: [teacherGuard] },
             {
                 path: ':id', component: ShowCourseComponent,
-                resolve: { params: getPrerenderParams }, // הוסף את הפונקציה כאן
-                data: { renderMode: 'prerender' } // השאר את renderMode
+                resolve: { params: getPrerenderParams }, // ודא שהפונקציה מוגדרת
             },
             {
                 path: 'AddLesson/:id', component: AddLessonComponent,
-                resolve: { params: getPrerenderParams }, // הוסף את הפונקציה כאן
-                data: { renderMode: 'prerender' } // השאר את renderMode
+                resolve: { params: getPrerenderParams }, // ודא שהפונקציה מוגדרת
             }
         ]
     }
 ];
+

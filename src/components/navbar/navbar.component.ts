@@ -13,10 +13,7 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
     RouterOutlet, 
     MatToolbarModule,
     MatButtonModule, 
-    MatIconModule,
-    
-    
-
+    MatIconModule
   ],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'

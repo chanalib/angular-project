@@ -18,7 +18,7 @@ import { EditLessonComponent } from '../edit-lesson/edit-lesson.component';
     RouterLink,
     RouterOutlet,MatIconModule, MatButtonModule, FormsModule,ErrorDialogComponent],
   templateUrl: './show-course.component.html',
-  styleUrl: './show-course.component.css',
+  styleUrl: './show-course.component.css'
 })
 export class ShowCourseComponent {
   courseId: string = '';
@@ -45,9 +45,9 @@ role!: string
     
   }
 
-
-  getCourseDetails(): void {  
-   
+  getCourseDetails(): void {
+    
+    
     this.coursesService.getCourseById(this.courseId).subscribe({
       next: (data) => {
         this.course = data;

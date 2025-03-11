@@ -1,0 +1,51 @@
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+.auth-container {
+    text-align: center;
+    padding: 40px; /* רווח פנימי גדול יותר */
+    border-radius: 10px; /* פינות מעוגלות */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* צל להוספת עומק */
+}
+
+.title {
+    font-size: 2.5em;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 20px; /* רווח מתחת לכותרת */
+    color: #333; /* צבע טקסט כהה */
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    gap: 15px; /* רווח בין הכפתורים */
+}
+
+.auth-button {
+    font-size: 1.1em; /* גודל פונט קטן יותר */
+    flex: 1;
+    padding: 12px; /* רווח פנימי לכפתורים */
+    border: none; /* ללא מסגרת */
+    border-radius: 9px; /* פינות מעוגלות */
+    background-color: #464747; /* צבע רקע כחול כהה */
+    color: white; /* צבע טקסט לבן */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* מעבר חלק לצבע רקע */
+}
+
+.auth-button:hover {
+    background-color: #0056b3; /* צבע רקע כהה יותר בהעברה */
+    transform: translateY(-2px); /* הזזה קלה למעלה */
+}
+
+@keyframes sparkle {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}

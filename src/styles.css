@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+
+body {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background-image: url('../src/inages/backgraoundImage.jpg'); /* ודא שהנתיב נכון */
+    width: 100%; /* השתמש ב-100vw כדי לתפוס את כל רוחב החלון */
+    height: 100%; /* השתמש ב-100vh כדי לתפוס את כל גובה החלון */
+    background-size: cover; /* מכסה את כל שטח האלמנט */
+    background-position: center; /* ממרכז את התמונה */
+    z-index: -1; /* אם יש אלמנטים אחרים, ודא שהז-אינדקס לא מסתיר את התמונה */
+    display: block;
+    overflow: hidden; /* מונע גלילה */
+    padding: 5px;
+}

@@ -1,0 +1,24 @@
+a{
+    text-decoration: none;
+    color:black;
+    margin: 30px;
+}
+.menu {
+    display: flex;              /* הופך את המיכל ל-Flexbox */
+    justify-content: space-around;    /* ממקם את הפריטים במרכז */
+        /* ממקם את הפריטים במרכז אנכית */
+    flex-wrap: wrap;   
+  
+    /* מאפשר לפריטים לעבור לשורה הבאה אם אין מקום */
+}
+
+.menu-item {
+    margin: 0 90px;
+}
+.mat-toolbar{
+    display: flex;              /* הופך את המיכל ל-Flexbox */
+    justify-content: space-around;    /* ממקם את הפריטים במרכז */
+        /* ממקם את הפריטים במרכז אנכית */
+    flex-wrap: wrap; 
+   
+}

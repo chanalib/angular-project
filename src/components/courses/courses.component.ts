@@ -12,7 +12,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';  // ✅ נוספה
 import { MatButtonModule } from '@angular/material/button';  // ✅ נוספה תמיכה בכפתורים
 import { UserService } from '../../services/User/user.service';
 import { AditDialogComponent } from '../adit-dialog/adit-dialog.component';
-import { log } from 'node:console';
 
 @Component({
   selector: 'app-courses',

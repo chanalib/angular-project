@@ -25,6 +25,8 @@ export const routes: Routes = [
     {
         path: 'navbar', component: NavbarComponent,
         children: [
+            { path: 'courses/:id', component: ShowCourseComponent },
+
             { path: 'courses', component: CoursesComponent },
             { path: 'home', component: HomePageComponent },
             { path: 'addCourse', component: AddTeacherComponent, canActivate: [teacherGuard] },

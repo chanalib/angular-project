@@ -1,24 +1,26 @@
-a{
-    text-decoration: none;
-    color:black;
-    margin: 30px;
+/* navbar.component.css */
+
+:host {
+    display: block; /* מבטיח שהקומפוננטה תופסת שטח */
+    width: 100%;
 }
+
+.mat-toolbar {
+    display: flex; /* הופך את המיכל ל-Flexbox */
+    justify-content: space-around; /* ממקם את הפריטים במרכז */
+    flex-wrap: wrap; 
+    background-color: white; /* צבע רקע ל-toolbar */
+    padding: 10px 0; /* padding סביב ה-toolbar */
+}
+
 .menu {
-    display: flex;              /* הופך את המיכל ל-Flexbox */
-    justify-content: space-around;    /* ממקם את הפריטים במרכז */
-        /* ממקם את הפריטים במרכז אנכית */
-    flex-wrap: wrap;   
-  
-    /* מאפשר לפריטים לעבור לשורה הבאה אם אין מקום */
+    display: flex; /* הופך את המיכל ל-Flexbox */
+    justify-content: space-around; /* ממקם את הפריטים במרכז */
+    flex-wrap: wrap; /* מאפשר לפריטים לעבור לשורה הבאה אם אין מקום */
 }
 
 .menu-item {
-    margin: 0 90px;
-}
-.mat-toolbar{
-    display: flex;              /* הופך את המיכל ל-Flexbox */
-    justify-content: space-around;    /* ממקם את הפריטים במרכז */
-        /* ממקם את הפריטים במרכז אנכית */
-    flex-wrap: wrap; 
-   
+    margin: 0 20px; /* הפחתת margin כדי למנוע חריגה */
+    color: black; /* צבע טקסט */
+    text-decoration: none; /* הסרת קו תחתון */
 }

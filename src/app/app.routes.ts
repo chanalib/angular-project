@@ -1,16 +1,16 @@
 import { Routes } from '@angular/router';
-import { of } from 'rxjs';
-import { ActivatedRouteSnapshot } from '@angular/router';
-import { NavbarComponent } from '../components/navbar/navbar.component';
-import { ShowCourseComponent } from '../components/show-course/show-course.component';
-import { AddLessonComponent } from '../components/add-lesson/add-lesson.component';
-import { HeaderComponent } from '../components/header/header.component';
-import { CoursesComponent } from '../components/courses/courses.component';
-import { HomePageComponent } from '../components/home-page/home-page.component';
-import { AddTeacherComponent } from '../components/add-teacher/add-teacher.component';
-import { teacherGuard } from '../guard/teacher.guard';
 import { LoginComponent } from '../components/login/login.component';
 import { SighUpComponent } from '../components/sigh-up/sigh-up.component';
+import { CoursesComponent } from '../components/courses/courses.component';
+import { AddTeacherComponent } from '../components/add-teacher/add-teacher.component';
+import { teacherGuard } from '../guard/teacher.guard';
+import { ShowCourseComponent } from '../components/show-course/show-course.component';
+import { NavbarComponent } from '../components/navbar/navbar.component';
+import { AddLessonComponent } from '../components/add-lesson/add-lesson.component';
+import { HeaderComponent } from '../components/header/header.component';
+import { HomePageComponent } from '../components/home-page/home-page.component';
+import { of } from 'rxjs';
+import { ActivatedRouteSnapshot } from '@angular/router';
 
 // פונקציה להחזרת פרמטרים עבור prerendering
 export function getPrerenderParams(route: ActivatedRouteSnapshot) {
@@ -26,17 +26,12 @@ export const routes: Routes = [
         path: 'navbar', component: NavbarComponent,
         children: [
             { path: 'courses', component: CoursesComponent },
+            { path: 'courses/:id', component: ShowCourseComponent, resolve: { params: getPrerenderParams } }, // נתיב חדש
             { path: 'home', component: HomePageComponent },
             { path: 'addCourse', component: AddTeacherComponent, canActivate: [teacherGuard] },
-            {
-                path: ':id', component: ShowCourseComponent,
-                resolve: { params: getPrerenderParams }, // ודא שהפונקציה מוגדרת
-            },
-            {
-                path: 'AddLesson/:id', component: AddLessonComponent,
-                resolve: { params: getPrerenderParams }, // ודא שהפונקציה מוגדרת
-            }
+            { path: 'AddLesson/:id', component: AddLessonComponent, resolve: { params: getPrerenderParams } }
         ]
     }
+    
+    
 ];
-

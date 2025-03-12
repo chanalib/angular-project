@@ -67,6 +67,9 @@ role!: string
         console.log("Data from server:", data); // הוסף את זה
 
         this.lessons = data;
+        
+        
+        
       },
       error: (error) => {
         console.error('Error fetching courses:', error);

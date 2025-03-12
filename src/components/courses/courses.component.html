@@ -8,7 +8,7 @@
 
   @if(!loading && courses.length > 0) {
     <ul class="courses-grid">
-      @for(course of courses; track course.teacherId) {
+      @for(course of courses; track course.id) { <!-- השתנה ל-track course.id -->
         <li class="course-card" appHover>
           @if(role=='student') {
             <div class="top-left-buttons">
@@ -35,7 +35,7 @@
             <span class="teacher">מורה: {{ course.teacherId }}</span>
           </div>
           <div class="buttons-container">
-            <button [routerLink]="['/navbar', course.id]" class="black-button">צפה בקורס</button>
+            <button [routerLink]="['/navbar/courses', course.id]" class="black-button">צפה בקורס</button>
             @if(role=='teacher') {
               <button class="icon-button" (click)="Adit(course.id)"><mat-icon>edit</mat-icon></button>
               <button class="icon-button" (click)="Delete(course.id)"><mat-icon>delete</mat-icon></button>
@@ -51,5 +51,3 @@
   }
   <router-outlet/>
 </div>
-
-

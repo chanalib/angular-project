@@ -37,7 +37,7 @@ export class AddLessonComponent implements OnInit {
       const { title, content } = this.lessonForm.value;
       this.lessonService.createLesson(this.courseId, title, content).subscribe({
         next: (response) => {
-          this.router.navigate([`/navbar/${this.courseId}`]);
+          this.router.navigate([`/navbar/courses/${this.courseId}`]);
         },
         error: (err) => {
           console.error('Error adding lesson', err);

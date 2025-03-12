@@ -26,10 +26,10 @@ export const routes: Routes = [
         path: 'navbar', component: NavbarComponent,
         children: [
             { path: 'courses', component: CoursesComponent },
-            { path: 'courses/:id', component: ShowCourseComponent, resolve: { params: getPrerenderParams } }, // נתיב חדש
+            { path: 'courses/:id', component: ShowCourseComponent, resolve: { params: getPrerenderParams },data: { renderMode: 'default' } }, // נתיב חדש
             { path: 'home', component: HomePageComponent },
-            { path: 'addCourse', component: AddTeacherComponent, canActivate: [teacherGuard] },
-            { path: 'AddLesson/:id', component: AddLessonComponent, resolve: { params: getPrerenderParams } }
+            { path: 'addCourse', component: AddTeacherComponent, canActivate: [teacherGuard] ,data: { renderMode: 'default' }},
+            { path: 'AddLesson/:id', component: AddLessonComponent, resolve: { params: getPrerenderParams } ,data: { renderMode: 'default' }}
         ]
     }
     

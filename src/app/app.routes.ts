@@ -28,7 +28,7 @@ export const routes: Routes = [
             { path: 'courses/:id', component: ShowCourseComponent },
 
             { path: 'courses', component: CoursesComponent },
-            { path: 'home', component: HomePageComponent },
+            { path: 'home-page', component: HomePageComponent },
             { path: 'addCourse', component: AddTeacherComponent, canActivate: [teacherGuard] },
             { path: ':id', component: ShowCourseComponent, resolve: { params: getPrerenderParams } },
             { path: 'AddLesson/:id', component: AddLessonComponent, resolve: { params: getPrerenderParams } }

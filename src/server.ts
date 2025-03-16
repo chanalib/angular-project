@@ -14,17 +14,8 @@ const browserDistFolder = resolve(serverDistFolder, '../browser');
 const app = express();
 const angularApp = new AngularNodeAppEngine();
 
-/**
- * Example Express Rest API endpoints can be defined here.
- * Uncomment and define endpoints as necessary.
- *
- * Example:
- * ```ts
- * app.get('/api/**', (req, res) => {
- *   // Handle API request
- * });
- * ```
- */
+// לוג כדי לבדוק את הנתיב לסטטיים
+console.log('Serving static files from:', browserDistFolder);
 
 /**
  * Serve static files from /browser
@@ -47,6 +38,13 @@ app.use('/**', (req, res, next) => {
       response ? writeResponseToNodeResponse(response, res) : next(),
     )
     .catch(next);
+});
+
+/**
+ * Handle 404 errors
+ */
+app.use((req, res) => {
+  res.status(404).send('404 Not Found');
 });
 
 /**

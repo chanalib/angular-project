@@ -65,7 +65,7 @@ export class LoginComponent implements OnInit {
                     sessionStorage.setItem('token', response.token);
                     sessionStorage.setItem('role', response.role);
                     sessionStorage.setItem('UserId', response.userId);
-                    this.router.navigate(['/navbar/home']);
+                    this.router.navigate(['/navbar/home-page']);
                 } else {
                     this.openErrorDialog('Login failed. Please check your credentials.');
                 }

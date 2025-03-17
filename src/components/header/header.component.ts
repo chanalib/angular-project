@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { LoginComponent } from '../login/login.component';
-import { SighUpComponent } from '../sigh-up/sigh-up.component';
 import { Router } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 
@@ -8,7 +7,7 @@ import { MatIconModule } from '@angular/material/icon';
 
   selector: 'app-header',
   standalone: true,
-  imports: [LoginComponent,SighUpComponent,MatIconModule],
+  imports: [LoginComponent,MatIconModule],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })

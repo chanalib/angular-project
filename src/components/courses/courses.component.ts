@@ -5,7 +5,7 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { ErrorDialogComponent } from '../error-dialog/error-dialog.component';
 import { CommonModule } from '@angular/common';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import { HoverDirective } from '../../Directive/hover.directive';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';  // ✅ נוספה תמיכה בתפריט
@@ -23,7 +23,6 @@ import { AditDialogComponent } from '../adit-dialog/adit-dialog.component';
     HoverDirective,  
     ErrorDialogComponent,
     MatProgressSpinnerModule,
-    RouterLinkActive, 
     RouterLink,
     RouterOutlet,
     MatToolbarModule,  

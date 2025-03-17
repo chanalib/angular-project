@@ -8,7 +8,6 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
-import { ErrorDialogComponent } from '../error-dialog/error-dialog.component';
 import { EditLessonComponent } from '../edit-lesson/edit-lesson.component';
 
 @Component({
@@ -16,7 +15,7 @@ import { EditLessonComponent } from '../edit-lesson/edit-lesson.component';
   standalone: true,
   imports: [MatIconModule,MatButtonModule,RouterLinkActive, 
     RouterLink,
-    RouterOutlet,MatIconModule, MatButtonModule, FormsModule,ErrorDialogComponent],
+    RouterOutlet,MatIconModule, MatButtonModule, FormsModule],
   templateUrl: './show-course.component.html',
   styleUrl: './show-course.component.css'
 })

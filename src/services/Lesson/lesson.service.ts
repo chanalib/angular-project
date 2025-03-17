@@ -12,7 +12,6 @@ export class LessonService {
   
   private token = sessionStorage.getItem('token');
 
-  // Get all lessons by course ID
   getLessonsByCourseId(courseId: string): Observable<any> {
     const httpOptions = {
       headers: new HttpHeaders({
@@ -22,7 +21,6 @@ export class LessonService {
     return this.http.get<any>(`${this.apiUrl}/${courseId}/lessons`, httpOptions);
   }
 
-  // Get lesson by ID
   getLessonById(courseId: string, lessonId: string): Observable<any> {
     const httpOptions = {
       headers: new HttpHeaders({
@@ -32,7 +30,6 @@ export class LessonService {
     return this.http.get<any>(`${this.apiUrl}/${courseId}/lessons/${lessonId}`, httpOptions);
   }
 
-  // Create new lesson (Teacher only)
   createLesson(courseId: string, title: string, content: string): Observable<any> {
     const body = { title, content }; // הסר את courseId מגוף הבקשה
     const httpOptions = {
@@ -42,7 +39,7 @@ export class LessonService {
     }
     return this.http.post<any>(`${this.apiUrl}/${courseId}/lessons`, body,httpOptions);
   }
-  // Update lesson by ID (Teacher only)
+  
   updateLesson(courseId: string, lessonId: string, updates: any): Observable<any> {
     const httpOptions = {
       headers: new HttpHeaders({

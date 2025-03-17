@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Course } from '../../models/Course';
-import { ActivatedRoute, Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink, RouterOutlet } from '@angular/router';
 import { CourseService } from '../../services/Course/course.service';
 import { LessonService } from '../../services/Lesson/lesson.service';
 import { Lesson } from '../../models/Lessons';
@@ -13,7 +13,7 @@ import { EditLessonComponent } from '../edit-lesson/edit-lesson.component';
 @Component({
   selector: 'app-show-course',
   standalone: true,
-  imports: [MatIconModule,MatButtonModule,RouterLinkActive, 
+  imports: [MatIconModule,MatButtonModule,
     RouterLink,
     RouterOutlet,MatIconModule, MatButtonModule, FormsModule],
   templateUrl: './show-course.component.html',

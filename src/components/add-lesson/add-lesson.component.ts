@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { LessonService } from '../../services/Lesson/lesson.service';
-import { ActivatedRoute, Router, RouterLink, RouterLinkActive } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -11,7 +11,7 @@ import { MatInputModule } from '@angular/material/input';
 @Component({
   selector: 'app-add-lesson',
   standalone: true,
-  imports: [MatIconModule, MatButtonModule, FormsModule, RouterLinkActive, RouterLink,
+  imports: [MatIconModule, MatButtonModule, FormsModule,
      MatInputModule, MatCardModule, MatFormFieldModule, ReactiveFormsModule],
   templateUrl: './add-lesson.component.html',
   styleUrl: './add-lesson.component.css'

@@ -7,7 +7,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { CourseService } from '../../services/Course/course.service';
 import { MatIconModule } from '@angular/material/icon';
-import { Router, RouterLink, RouterLinkActive } from '@angular/router';
+import { Router, RouterLinkActive } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
 @Component({
@@ -21,7 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatIconModule,
     MatCardModule, 
     RouterLinkActive,
-    RouterLink,
+ 
   
     HttpClientModule],
   templateUrl: './add-teacher.component.html',

@@ -27,7 +27,6 @@ import { HttpClientModule } from '@angular/common/http'; // Import HttpClientMod
     MatButtonModule, 
     MatCardModule, 
     MatDialogModule, 
-    ErrorDialogComponent,
     HttpClientModule // Add HttpClientModule here
 
   ],

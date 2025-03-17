@@ -21,7 +21,7 @@ import { AditDialogComponent } from '../adit-dialog/adit-dialog.component';
     MatDialogModule,    
     MatIconModule,    
     HoverDirective,  
-    ErrorDialogComponent,
+   
     MatProgressSpinnerModule,
     RouterLink,
     RouterOutlet,

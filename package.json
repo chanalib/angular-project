@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --configuration production && cp dist/online-courses-project/browser/index.csr.html dist/online-courses-project/browser/index.html",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:Online-Courses-Project": "node dist/online-courses-project/server/server.mjs"

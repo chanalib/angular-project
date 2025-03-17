@@ -49,7 +49,6 @@ export class LessonService {
     return this.http.put<any>(`${this.apiUrl}/${courseId}/lessons/${lessonId}`, updates,httpOptions);
   }
 
-  // Delete lesson by ID (Teacher only)
   deleteLesson(courseId: string, lessonId: string): Observable<any> {
     const httpOptions = {
       headers: new HttpHeaders({

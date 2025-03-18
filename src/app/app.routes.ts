@@ -1,4 +1,4 @@
-import { Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from '../components/login/login.component';
 import { SighUpComponent } from '../components/sigh-up/sigh-up.component';
 import { CoursesComponent } from '../components/courses/courses.component';
@@ -11,6 +11,7 @@ import { HeaderComponent } from '../components/header/header.component';
 import { HomePageComponent } from '../components/home-page/home-page.component';
 import { of } from 'rxjs';
 import { ActivatedRouteSnapshot } from '@angular/router';
+import { NgModule } from '@angular/core';
 
 // פונקציה להחזרת פרמטרים עבור prerendering
 export function getPrerenderParams(route: ActivatedRouteSnapshot) {

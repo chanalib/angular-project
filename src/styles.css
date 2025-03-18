@@ -18,3 +18,6 @@ a {
     color: black; /* צבע טקסט */
     margin: 30px; /* מרווח סביב הקישורים */
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
